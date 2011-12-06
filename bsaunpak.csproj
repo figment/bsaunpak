@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F131A50-22E6-4C43-8220-7362B987C8D5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bsaunpak</RootNamespace>
+    <AssemblyName>bsaunpak</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BSAArchive.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
